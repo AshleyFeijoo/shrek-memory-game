@@ -3,7 +3,7 @@ import React from "react";
 import "./header.css";
 
 const Header = () => (
-	<header className = "header row p-5">
+	<header className = "header row p-5 mt-5">
 		<div class="col-md-12 mx-auto text-center">
 		{/* <img src={ require('../../images/shrekHeader.png') } alt="shrek-pic" border="0"/> */}
 		</div>

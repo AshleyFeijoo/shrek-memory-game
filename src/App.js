@@ -4,7 +4,12 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CharacterCard from "./components/CharacterCard";
 import characters from "./characters.json";
+import Notification from "./components/Notification"
+import { Route, Redirect } from 'react-router'
+// import (jquery)
+
 import "./App.css";
+
 
 class App extends Component {
   state = {
@@ -26,7 +31,7 @@ class App extends Component {
         clickedChar: [],
         score: 0
       });
-        alert("You lose. Play again?");
+        alert("you SUCK!");
     } else {
       this.setState(
         {
@@ -41,7 +46,9 @@ class App extends Component {
     
         () => {
           if (this.state.score === 12) {
-            alert("Yay! You Win!");
+            alert("You have WON IT.");
+            // $('#myModal').modal('show');
+
             this.setState({
               charList: this.state.charList.sort(function(a, b) {
                 return 0.5 - Math.random();
@@ -56,23 +63,25 @@ class App extends Component {
   };
   render() {
     return (
-      <div class="cont m-0">
-  
-        <Navbar 
+      <div>
+        <Navbar
           score={this.state.score}
         />
-              <Header />
-        <div className="container h-100">
-        <div className="wrapper row flex-row justify-content-center m-5">
-          {this.state.charList.map(charList => (
-            <CharacterCard
-              imageClick={this.imageClick}
-              id={charList.id}
-              key={charList.id}
-              image={charList.image}
-            />
-          ))}
-        </div>
+                  <Header />
+
+        <div class="cont m-0 bg">
+          <div className="container h-100">
+            <div className="wrapper row flex-row justify-content-center m-5">
+              {this.state.charList.map(charList => (
+                <CharacterCard
+                  imageClick={this.imageClick}
+                  id={charList.id}
+                  key={charList.id}
+                  image={charList.image}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

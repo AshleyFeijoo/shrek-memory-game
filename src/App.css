@@ -16,12 +16,12 @@ body, html {
 .bg {
   /* The image used */
   background-image: url("./images/CuShj4j.jpg");
-
+  margin-top:10em;
   /* Full height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
