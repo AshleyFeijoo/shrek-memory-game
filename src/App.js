@@ -11,8 +11,7 @@ import "./App.css";
 window.jQuery = $;
 window.$ = $;
 global.jQuery = $;
-const bootstrap = require('bootstrap');
-console.log(bootstrap)
+// const bootstrap = require('bootstrap');
 
 
 class App extends Component {
@@ -25,7 +24,6 @@ class App extends Component {
 
   imageClick = event => {
     var currentHighScore = this.state.highScore;
-    console.log(event.target.alt);
     const currentCharacter = event.target.alt;
     const charAlreadyClicked =
       this.state.clickedChar.indexOf(currentCharacter) > -1;
