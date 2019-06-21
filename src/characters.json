@@ -1,0 +1,56 @@
+[{
+        "id": 1,
+        "name": "Shrek",
+        "image": "Shrek.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Fiona",
+        "image":"Fiona.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Donkey",
+        "image": "donkey.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Lord Farquaad",
+        "image": "LordFarquad.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Puss in Boots",
+        "image": "PussInBoots.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Pinocchio",
+        "image": "Pinnochio.png"
+    },
+    {
+        "id": 7,
+        "name": "Gingerbread Man",
+        "image": "GingerBreadMan.jpeg"
+    }, {
+        "id": 8,
+        "name": "Farkle",
+        "image": "Farkle.jpg"
+    }, {
+        "id": 9,
+        "name": "Fergus",
+        "image": "Fergus.jpeg"
+    }, {
+        "id": 10,
+        "name": "Felicia",
+        "image": "Felicia.jpg"
+    }, {
+        "id": 11,
+        "name": "Prince Charming",
+        "image": "PrinceCharming.jpeg"
+    }, {
+        "id": 12,
+        "name": "Human Shrek",
+        "image": "humanShrek.jpg"
+    }
+]
