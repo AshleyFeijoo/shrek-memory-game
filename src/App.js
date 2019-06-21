@@ -1,14 +1,18 @@
 //imports dependencies and files
 import React, { Component } from "react";
+import $ from 'jquery';
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CharacterCard from "./components/CharacterCard";
 import characters from "./characters.json";
-import Notification from "./components/Notification"
-import { Route, Redirect } from 'react-router'
 // import (jquery)
 
 import "./App.css";
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
+const bootstrap = require('bootstrap');
+console.log(bootstrap)
 
 
 class App extends Component {
@@ -19,11 +23,14 @@ class App extends Component {
   };
 
   imageClick = event => {
+    console.log(event.target.alt);
     const currentCharacter = event.target.alt;
     const charAlreadyClicked =
       this.state.clickedChar.indexOf(currentCharacter) > -1;
 
     if (charAlreadyClicked) {
+       $('#youLose').modal('show');
+
       this.setState({
         charList: this.state.charList.sort(function(a, b) {
           return 0.5 - Math.random();
@@ -31,7 +38,6 @@ class App extends Component {
         clickedChar: [],
         score: 0
       });
-        alert("you SUCK!");
     } else {
       this.setState(
         {
@@ -46,9 +52,7 @@ class App extends Component {
     
         () => {
           if (this.state.score === 12) {
-            alert("You have WON IT.");
-            // $('#myModal').modal('show');
-
+            $('#youWon').modal('show');
             this.setState({
               charList: this.state.charList.sort(function(a, b) {
                 return 0.5 - Math.random();
@@ -68,8 +72,7 @@ class App extends Component {
           score={this.state.score}
         />
                   <Header />
-
-        <div class="cont m-0 bg">
+        {/* <div className="cont m-0 bg"> */}
           <div className="container h-100">
             <div className="wrapper row flex-row justify-content-center m-5">
               {this.state.charList.map(charList => (
@@ -82,7 +85,7 @@ class App extends Component {
               ))}
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     );
   }

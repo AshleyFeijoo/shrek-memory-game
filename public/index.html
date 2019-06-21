@@ -10,6 +10,8 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
+
     <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/fontawesome-all.min.css" rel="stylesheet">
   <link href="./css/fontawesome.min.css" rel="stylesheet">
@@ -33,60 +35,49 @@
 <body class="">
 
 
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <!-- <div class="row">
-    <div class="col-md-12">
-      <div id="mdb-lightbox-ui"></div>
-      <div class="mdb-lightbox no-margin">
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg" class="img-fluid">
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
-          </a>
-        </figure>
-        <figure class="col-md-4">
-          <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg" data-size="1600x1067">
-            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg" class="img-fluid" />
-          </a>
-        </figure>
+ 
+  <div class= "mx-auto bg container" id="root"></div>
+
+  <!-- LOSER MODAL-->
+  <div class="modal fade" id="youLose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">You Lose! Try again!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closemodal">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
       </div>
-    </div>
-  </div> -->
-  <div class= "mx-auto bg" id="root"></div>
+      </div>
+      </div>
+      </div>
+
+  <!-- LOSER MODAL -->
+
+    <!-- WInner MODAL-->
+    <div class="modal fade" id="youWon" tabindex="-1" role="dialog" aria-labelledby="myWonModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-success" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <p class="heading lead">You Won!</p>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+      </div>
+      </div>
+      </div>
+    <!-- Winner MODAL -->
 
   <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
   <!-- Bootstrap tooltips -->

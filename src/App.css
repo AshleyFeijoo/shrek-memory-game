@@ -1,3 +1,10 @@
+body{
+  background-color: rgb(39, 58, 39);
+  margin: 0 auto!important;
+  background-image: url("./images/CuShj4j.jpg");
+
+}
+
 .title {
   width: 100%;
   text-align: center;
@@ -12,16 +19,32 @@ img{
 }
 body, html {
   height: 100%;
+  font-family: 'Meiryo UI', monospace!important;
 }
+
+li, h2{
+  font-family: 'Meiryo UI', monospace!important;
+  color: rgba(219, 219, 219, 0.808);
+
+}
+
 .bg {
   /* The image used */
-  background-image: url("./images/CuShj4j.jpg");
-  margin-top:10em;
+
   /* Full height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+@font-face
+{
+    font-family: 'Meiryo UI';
+    font-weight: lighter;
+    font-style: normal;
+    src: url('./images/Shrek.ttf');
 }
