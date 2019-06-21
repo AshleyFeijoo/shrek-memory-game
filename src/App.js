@@ -19,24 +19,33 @@ class App extends Component {
   state = {
     charList: characters,
     clickedChar: [],
-    score: 0
+    score: 0,
+    highScore: 0
   };
 
   imageClick = event => {
+    var currentHighScore = this.state.highScore;
     console.log(event.target.alt);
     const currentCharacter = event.target.alt;
     const charAlreadyClicked =
       this.state.clickedChar.indexOf(currentCharacter) > -1;
 
     if (charAlreadyClicked) {
-       $('#youLose').modal('show');
+      var newHighScore = this.state.score;
 
+       $('#youLose').modal('show');
+       if (newHighScore >= currentHighScore){
+         this.setState({
+          highScore: newHighScore
+         })
+       };
       this.setState({
         charList: this.state.charList.sort(function(a, b) {
           return 0.5 - Math.random();
         }),
         clickedChar: [],
-        score: 0
+        score: 0,
+        
       });
     } else {
       this.setState(
@@ -70,6 +79,7 @@ class App extends Component {
       <div>
         <Navbar
           score={this.state.score}
+          highScore={this.state.highScore}
         />
                   <Header />
         {/* <div className="cont m-0 bg"> */}
